@@ -205,3 +205,55 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.egg-info/
+.env
+.venv
+env/
+venv/
+*.log
+
+# ---- FastAPI / Uvicorn ----
+instance/
+tmp/
+*.pid
+
+# ---- Jupyter / Colab ----
+.ipynb_checkpoints
+*.ipynb
+
+# ---- Node / Next.js ----
+node_modules/
+.next/
+out/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Docker ----
+*.dockerfile
+*.tar
+docker-compose.override.yml
+
+# ---- Others ----
+coverage/
+pytest_cache/
+
