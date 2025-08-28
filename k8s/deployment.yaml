@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+name: miniapp
+namespace: default
+spec:
+replicas: 2
+selector:
+matchLabels:
+app: miniapp
+template:
+metadata:
+labels:
+app: miniapp
+spec:
+containers:
+- name: miniapp
+image: your-dockerhub-username/miniapp:latest
+ports:
+- containerPort: 8000
+resources:
+requests:
+cpu: "500m"
+memory: "1Gi"
+limits:
+cpu: "2000m"
+memory: "4Gi"
+env:
+- name: WHISPER_SIZE
+value: "small"
+- name: STATIC_DIR
+value: "/app/static"
